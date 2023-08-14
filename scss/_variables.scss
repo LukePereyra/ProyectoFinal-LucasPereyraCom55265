@@ -1,0 +1,31 @@
+$tablet: 768px;
+$desktop: 992px;
+$desktopXG: 1200px;
+
+$fuente-principal: 'Amatic SC', cursive; 
+$fuente-chica: 14px;
+$fuente-media: 25px;
+$fuente-grande: 70px;
+$fuente-muygrande: 80px;
+
+$colorprimario: #000000;
+$colorsecundario: #ffe4c4;
+$colorterciario: #ffffff;
+
+$espacio-mini: 10px;
+$espacio-chico: 20px;
+$espacio-medio: 40px;
+$espacio-grande: 60px;
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

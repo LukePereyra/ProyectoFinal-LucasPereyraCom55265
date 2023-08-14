@@ -1,0 +1,43 @@
+#dai {
+    @include flex-center;
+}
+#dai a {
+    @include flex-center;
+    text-decoration: none;
+    gap: 30px;
+    margin: 30px 60px 30px 30px;
+    transition: all .7s;
+    color: bisque;
+}
+#dai a:hover {
+    background-color: black;
+    border-radius: 20px;    
+}
+
+#dai img{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 10px auto;
+}
+@media (min-width:768px) {
+    #dai{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+        justify-items: center;
+        align-items: center;
+
+        img {
+            max-height: 240px;
+        }
+    }
+}
+//no encontre razon ni solucion a porque no me toma display grid en estas imagenes especificamente//
+.manos{  
+    font-size: 30px;
+    text-align: center;
+    margin-top: 60px!important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+

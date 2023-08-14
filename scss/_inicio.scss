@@ -1,0 +1,146 @@
+body{
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: $fuente-media;
+    height: 100vh;    
+    background-image: url(../img/fondo2.jpeg)!important;
+    background-position:center;
+    // height: 1800px;
+    background-attachment:fixed;
+    background-size: cover;
+}
+img{
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {#header{
+    padding: 6 10;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $colorprimario ;
+
+}
+.logo {
+    position: absolute;
+    margin: 0;
+}
+#barra {
+    position: relative;
+}
+}
+ .container-fluid{
+     background-color: black;
+     display: block;
+ }
+ .nav-link, .nav-link.active, .navbar-nav .nav-link.active a{
+     color: $colorsecundario;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+
+     &:hover {         color: $colorterciario;
+     }
+ }
+
+.logo img{
+    width: 40px;
+}
+
+#navbarNav{
+    padding: 0%;
+}
+.navbar{
+    padding:0;
+}
+.navbar-toggler{
+    color: $colorterciario;
+    background-color:$colorsecundario;
+}
+h1, h3 {
+    @include flex-center;
+    color: $colorsecundario;
+    padding: 20px;
+    font-size: $fuente-grande;
+    margin: 125px 10px;
+    text-align: center;
+}
+p{
+    font-size: $fuente-media;
+    color: $colorsecundario;
+    text-align: center; 
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+.regalate{     
+    text-decoration:solid;
+    color: $colorterciario;
+    @include flex-center;
+    margin: 65px 50px;
+    background-color: $colorprimario;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    font-size: $fuente-media;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    text-align: center;
+}
+.espacio {
+    margin: 30px 30px 30px 30px;
+    
+}
+.beneficios{
+    color: $colorsecundario;
+    text-align: center;
+    list-style: none;
+}
+
+footer{
+    @include flex-center;
+    margin-top: 25px;
+}
+
+footer{
+    background-color: black;
+}
+footer img{
+    width: 40px;
+
+}
+ul{
+    padding-left: 0%;
+}
+.imgmodel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items:center;
+    align-items: center;
+    gap: 10px;
+}
+ol {
+    padding: 30px;
+}
+ol li{
+    font-size: $fuente-media;
+    color: $colorsecundario;
+    text-align: center; 
+    background: rgba(0, 0, 0, .5);
+    
+}
+#foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#foot a{
+    text-decoration: none;
+}
+//no me hizo falta usar @extend ya que usé más mixins y no tuve la necesidad y no queria poner por ponerlo//
