@@ -13,6 +13,8 @@
     <link rel="shorcut icon" href="../img/logo-espacio.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Con qué</title>
 </head>
 <body>
@@ -50,46 +52,79 @@
         
     <h1 class="animate__animated animate__fadeInDown">Productos que usamos</h1>
     
+    
+    
     <main id="cards">
         <div class="card" style="width: 18rem;">
           <img src="../img/producto1.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">Crema descontracturante de Libra. Marca líder en artículos destinados a la reparación muscular. $3500</p>
+            <button onclick="agregarAlCarrito('Crema descontracturante de Libra', 3500)">Agregar al carrito</button>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="../img/producto2.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">Aceites con efectos relajantes que combinados con los demás productos el resultado es asombroso. $1500</p>
+            <button onclick="agregarAlCarrito('Aceites con efectos relajantes', 1500)">Agregar al carrito</button>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="../img/producto3.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
-            <p class="card-text">Crema base para masaje y relajación, y además con cualidades humectantes para la piel. $3200
-            </p>
+            <p class="card-text">Crema base para masaje y relajación, y además con cualidades humectantes para la piel. $3200</p>
+            <button onclick="agregarAlCarrito('Crema base para masaje', 3200)">Agregar al carrito</button>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="../img/producto4.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">Velas de aroma-terapia que alivian los sentidos, relajan y armonizan tu cuerpo. $500 c/u</p>
+            <button onclick="agregarAlCarrito('Velas de aroma', 500)">Agregar al carrito</button>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="../img/producto5.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">Lámparas absorventes de energía que nos acompañan en ambientar nuestro lugar. $4000</p>
+            <button onclick="agregarAlCarrito('Lamparas absorventes', 4000)">Agregar al carrito</button>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
           <img src="../img/producto7.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-text">Palo santo que limpia y purifica el ambiente creando sensación de armonía. $600 c/u</p>
+            <button onclick="agregarAlCarrito('Palo santo', 600)">Agregar al carrito</button>
           </div>
         </div>
        
     </main>
+
+    <div id="carrito-lista">
+      <h2>Carrito de Compras</h2>
+      <ul id="carrito">
+          
+      </ul>
+      <p>Total a pagar: $<span id="total-a-pagar">0.00</span></p>
+      <button id="finalizar-compra">Finalizar Compra</button>
+  </div>
+
+  <div id="formulario-pago" style="display: none;">
+    <h2>Formulario de Pago</h2>
+    <form id="pago-form">
+        <label for="nombre-tarjeta">Nombre en la Tarjeta:</label>
+        <input type="text" id="nombre-tarjeta" required>
+        <label for="numero-tarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numero-tarjeta" required>
+        <label for="fecha-vencimiento">Fecha de Vencimiento:</label>
+        <input type="text" id="fecha-vencimiento" required>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" required>
+        <button type="submit" id="botonPagar">Pagar</button>
+    </form>
+</div>
+
+  </div>
     <footer id="foot">
       <div class="ig">
           <a href="https://web.whatsapp.com/" alt="Whatsapp" target="BLANK"><img src="../img/whatsapp.png">
